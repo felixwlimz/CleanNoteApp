@@ -14,5 +14,11 @@ data class NoteEntity(
     val title : String,
 
     @ColumnInfo("description")
-    val description : String
+    val description : String,
+
+    @ColumnInfo("createdAt")
+    val createdAt : Long ,
+
+    @ColumnInfo("updatedAt")
+    val updatedAt : Long
 )

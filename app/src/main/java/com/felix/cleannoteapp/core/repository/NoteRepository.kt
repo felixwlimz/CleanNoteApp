@@ -15,7 +15,9 @@ class NoteRepository @Inject constructor(private val localDataSource: LocalDataS
             return Note(
                 id = data.id,
                 title = data.title,
-                description = data.description
+                description = data.description,
+                createdAt = data.createdAt,
+                updatedAt = data.updatedAt
             )
         }
 
@@ -23,7 +25,9 @@ class NoteRepository @Inject constructor(private val localDataSource: LocalDataS
             return NoteEntity(
                 id = data.id,
                 title = data.title,
-                description = data.description
+                description = data.description,
+                createdAt = data.createdAt,
+                updatedAt = data.updatedAt
             )
         }
 
