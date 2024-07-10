@@ -17,8 +17,8 @@ data class NoteEntity(
     val description : String,
 
     @ColumnInfo("createdAt")
-    val createdAt : Long ,
+    val createdAt : Long = System.currentTimeMillis(),
 
     @ColumnInfo("updatedAt")
-    val updatedAt : Long
+    val updatedAt : Long = System.currentTimeMillis()
 )

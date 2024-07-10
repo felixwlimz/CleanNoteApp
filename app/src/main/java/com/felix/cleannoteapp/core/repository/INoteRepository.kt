@@ -10,7 +10,7 @@ interface INoteRepository {
 
     fun getNoteById(id : Int) : Flowable<Note>
 
-    fun insertNote(note : Note) : Single<Int>
+    fun insertNote(note : Note) : Single<Long>
 
     fun updateNote(note : Note) : Single<Int>
 

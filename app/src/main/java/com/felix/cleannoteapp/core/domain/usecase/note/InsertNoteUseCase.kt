@@ -8,7 +8,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 
 class InsertNoteUseCase(private val noteRepository: INoteRepository) {
 
-    operator fun invoke(note : Note) : Single<Int> {
+    operator fun invoke(note : Note) : Single<Long> {
         return noteRepository.insertNote(note)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())

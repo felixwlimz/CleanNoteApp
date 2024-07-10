@@ -48,7 +48,7 @@ class NoteRepository @Inject constructor(private val localDataSource: LocalDataS
         }
     }
 
-    override fun insertNote(note: Note): Single<Int> {
+    override fun insertNote(note: Note): Single<Long> {
         return localDataSource.insertNote(mapper.mapToEntity(note))
     }
 

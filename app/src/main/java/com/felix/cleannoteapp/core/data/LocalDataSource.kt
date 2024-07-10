@@ -14,7 +14,7 @@ class LocalDataSource @Inject constructor(private val noteDao: NoteDao) {
         return noteDao.getNoteById(id)
     }
 
-    fun insertNote(noteEntity: NoteEntity) : Single<Int> {
+    fun insertNote(noteEntity: NoteEntity) : Single<Long> {
         return noteDao.insertNote(noteEntity)
     }
 

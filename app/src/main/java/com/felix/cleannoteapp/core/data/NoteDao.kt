@@ -3,6 +3,7 @@ package com.felix.cleannoteapp.core.data
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import io.reactivex.rxjava3.core.Flowable
@@ -16,8 +17,8 @@ interface NoteDao {
     fun getAllNotes() : Flowable<List<NoteEntity>>
 
 
-    @Insert
-    fun insertNote(noteEntity: NoteEntity) : Single<Int>
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertNote(noteEntity: NoteEntity) : Single<Long>
 
 
     @Update
